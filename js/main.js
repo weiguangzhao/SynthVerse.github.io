@@ -260,3 +260,30 @@ const debouncedScroll = debounce(() => {
 }, 100);
 
 window.addEventListener('scroll', debouncedScroll);
+
+// ============================================
+// Scene Thumbnail Selection
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    const thumbnailWrappers = document.querySelectorAll('.scene-thumbnail-wrapper');
+    const thumbnails = document.querySelectorAll('.scene-thumbnail');
+    const vizFrame = document.getElementById('vizFrame');
+    
+    if (thumbnailWrappers.length > 0 && vizFrame) {
+        // Handle click on wrapper
+        thumbnailWrappers.forEach(wrapper => {
+            wrapper.addEventListener('click', function() {
+                const scene = this.dataset.scene;
+                if (scene) {
+                    // Update active state on thumbnails
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    const thumb = this.querySelector('.scene-thumbnail');
+                    if (thumb) thumb.classList.add('active');
+                    
+                    // Update iframe src to load new scene
+                    vizFrame.src = `demos/viz.html?scene=${scene}`;
+                }
+            });
+        });
+    }
+});

@@ -934,6 +934,29 @@ footer p {
     font-style: italic;
 }
 
+.footer-acknowledgement {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+.footer-acknowledgement a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.footer-acknowledgement a:hover {
+    text-decoration: underline;
+}
+
+.demo-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--medium-gray);
+    margin-top: 0.75rem;
+    font-style: italic;
+}
+
 /* ============================================
    Animations
    ============================================ */
@@ -1289,6 +1312,70 @@ footer p {
     to { transform: rotate(360deg); }
 }
 
+/* ============================================
+   Scene Thumbnail Bar
+   ============================================ */
+.scene-thumbnail-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.scene-thumbnail-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.scene-thumbnail-bar .scene-thumbnail {
+    width: 120px !important;
+    height: 75px !important;
+    object-fit: cover !important;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 3px solid transparent;
+    box-shadow: var(--shadow-md);
+}
+
+.scene-thumbnail-bar .scene-thumbnail:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(79, 70, 229, 0.3);
+}
+
+.scene-thumbnail-bar .scene-thumbnail.active {
+    border-color: var(--primary-indigo);
+    box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
+    transform: translateY(-2px);
+}
+
+.scene-thumbnail-label {
+    font-size: 0.85rem;
+    color: var(--medium-gray);
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .scene-thumbnail-bar {
+        gap: 1rem;
+    }
+    
+    .scene-thumbnail-bar .scene-thumbnail {
+        width: 90px !important;
+        height: 56px !important;
+    }
+    
+    .scene-thumbnail-label {
+        font-size: 0.75rem;
+    }
+}
+
 .demo-caption {
     text-align: center;
     font-size: 0.9rem;
@@ -1300,16 +1387,30 @@ footer p {
 /* ============================================
    Image Styles (New)
    ============================================ */
-.chart-container,
-.pipeline-image {
+.chart-container {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.chart-image,
-.pipeline-image img {
+.chart-image {
     width: 100%;
-    max-width: 900px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+    margin: 0 auto;
+    display: block;
+}
+
+.pipeline-image {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.pipeline-image img {
+    width: 100% !important;
+    max-width: none !important;
     height: auto;
     border-radius: 0.75rem;
     box-shadow: var(--shadow-md);

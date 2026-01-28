@@ -103,11 +103,12 @@
     <!-- Interactive Demo Section -->
     <section id="demo">
         <div class="container">
-            <h2 class="section-title">Interactive Demo</h2>
+            <h2 class="section-title">Explore SynthVerse</h2>
 
             <!-- 3D Visualization -->
             <div class="demo-section">
-                <h3 class="demo-section-title">Interactive 3D Point Cloud Visualizer</h3>
+                <h3 class="demo-section-title">Interactive Demo</h3>
+                
 <!--                <p class="demo-description">Explore SynthVerse point tracking results in an interactive 3D viewer. Select different scenarios to visualize point trajectories in 3D space.</p>-->
                 <div class="viz-container">
                     <div class="viz-loading" id="vizLoader">
@@ -116,11 +117,28 @@
                     </div>
                     <iframe id="vizFrame" src="demos/viz.html" frameborder="0" allowfullscreen></iframe>
                 </div>
+                <p class="demo-note"><em>Note: Distant scene points have been removed to speed up loading. Full depth information is retained in the SynthVerse dataset.</em></p>
             </div>
+            
+            <!-- Thumbnail bar for scene selection -->
+                <div class="scene-thumbnail-bar">
+                    <div class="scene-thumbnail-wrapper" data-scene="embodied">
+                        <img src="demos/embodied/thumbnail.png" alt="Embodied" class="scene-thumbnail" data-scene="embodied">
+                        <span class="scene-thumbnail-label">Embodied</span>
+                    </div>
+                    <div class="scene-thumbnail-wrapper" data-scene="flower">
+                        <img src="demos/flower/thumbnail.png" alt="Flower" class="scene-thumbnail active" data-scene="flower">
+                        <span class="scene-thumbnail-label">Flower</span>
+                    </div>
+                    <div class="scene-thumbnail-wrapper" data-scene="film">
+                        <img src="demos/film/thumbnail.png" alt="Film" class="scene-thumbnail" data-scene="film">
+                        <span class="scene-thumbnail-label">Film</span>
+                    </div>
+                </div>
 
             <!-- Demo Video -->
             <div class="demo-section">
-                <h3 class="demo-section-title">Demo Video</h3>
+                <h3 class="demo-section-title">Visualization Results</h3>
 <!--                <p class="demo-description">Point tracking results across diverse scenarios including navigation, human motion, animal movement, and object manipulation.</p>-->
                 <div class="demo-video-container">
                     <video controls autoplay muted loop playsinline>
@@ -208,7 +226,7 @@
             <!-- Source Data Table -->
             <div class="subsection">
                 <h3 class="subsection-title">Source Data</h3>
-                <p class="table-note">Ins., Cam., Traj., and Vis. separately denote instance masks, camera poses, point trajectories, and point visibility. Moreover, <span class="sym-check">✓</span> indicates that the original dataset already provides the corresponding signal. <span class="sym-cross">✗</span> is that the original dataset does not include this information, and we also do not provide it. <span class="sym-new">☺</span> represents that the original dataset lacks this information, but we additionally annotate and incorporate it in our SynthVerse.</p>
+                <p class="table-note"> <span class="sym-check">✓</span> indicates that the original dataset already provides the corresponding signal. <span class="sym-cross">✗</span> is that the original dataset does not include this information, and we also do not provide it. <span class="sym-new">🙂</span> represents that the original dataset lacks this information, but we additionally annotate and incorporate it in our SynthVerse.</p>
                 <div class="table-wrapper">
                     <table class="source-data-table">
                         <thead>
@@ -217,10 +235,10 @@
                                 <th>Raw Data</th>
                                 <th>RGB</th>
                                 <th>Depth</th>
-                                <th>Ins.</th>
-                                <th>Cam.</th>
-                                <th>Traj.</th>
-                                <th>Vis.</th>
+                                <th>Instance Masks</th>
+                                <th>Camera Poses</th>
+                                <th>Point Trajectories</th>
+                                <th>Point Visibility</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -231,8 +249,8 @@
                                 <td class="sym-check">✓</td>
                                 <td class="sym-check">✓</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="category-cell">Human</td>
@@ -240,84 +258,84 @@
                                 <td class="sym-check">✓</td>
                                 <td class="sym-check">✓</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="category-cell" rowspan="2">Animal</td>
                                 <td class="rawdata-cell">Truebones</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="rawdata-cell">AnyTop</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="category-cell" rowspan="5">Objects</td>
                                 <td class="rawdata-cell">OmniObject3D</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="rawdata-cell">PartNet-M</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="rawdata-cell">Infinite-M</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="rawdata-cell">BlendSwap</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="rawdata-cell">Blender-Demo</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="category-cell">Film</td>
                                 <td class="rawdata-cell">Blender-Studio</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
                                 <td class="sym-cross">✗</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="category-cell" rowspan="2">Navigation</td>
@@ -326,36 +344,36 @@
                                 <td class="sym-check">✓</td>
                                 <td class="sym-cross">✗</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="rawdata-cell">Mixamo</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
                                 <td class="sym-cross">✗</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="category-cell" rowspan="2">Interaction</td>
                                 <td class="rawdata-cell">Hot3D</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
                                 <td class="sym-check">✓</td>
                                 <td class="sym-check">✓</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                             <tr>
                                 <td class="rawdata-cell">HTML</td>
                                 <td class="sym-check">✓</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
-                                <td class="sym-new">☺</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
+                                <td class="sym-new">🙂</td>
                             </tr>
                         </tbody>
                     </table>
@@ -693,8 +711,9 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 SynthVerse. All rights reserved.</p>
+            <p>&copy; 2026 SynthVerse</p>
             <p class="footer-note">Contact: weiguang.zhao@liverpool.ac.uk</p>
+            <p class="footer-acknowledgement">The point cloud visualizer is adapted from <a href="https://github.com/zbw001/TAPIP3D" target="_blank">TAPIP3D</a>.</p>
         </div>
     </footer>
 
