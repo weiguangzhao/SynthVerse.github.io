@@ -52,8 +52,8 @@
             <h1 class="title">SynthVerse: A Large-Scale Diverse Synthetic Dataset for Point Tracking</h1>
             <div class="authors">
                 <div class="authors-list">
-                    <span class="author">Weiguang Zhao</a><sup>1,†</sup></span>,
-                    <span class="author">Haoran Xu<sup>2,†</sup></span>,
+                    <span class="author">Weiguang Zhao</a><sup>1,*</sup></span>,
+                    <span class="author">Haoran Xu<sup>2,*</sup></span>,
                     <span class="author">Xingyu Miao<sup>3</sup></span>,
                     <span class="author">Qin Zhao<sup>2</sup></span>,
                     <span class="author">Rui Zhang<sup>4</sup></span>,
@@ -64,14 +64,14 @@
                     <span class="author">Mulin Yu<sup>6</sup></span>,
                     <span class="author">Tao Lu<sup>6</sup></span>,
                     <span class="author">Linning Xu<sup>6,10</sup></span>,
-                    <span class="author">Junting Dong<sup>6</sup></span>,
+                    <span class="author">Junting Dong<sup>6,†</sup></span>,
                     <span class="author">Jiangmiao Pang<sup>6</sup></span>
                 </div>
                 <div class="affiliations">
                     <p class="affil"><sup>1</sup>University of Liverpool, <sup>2</sup>Zhejiang University, <sup>3</sup>Durham University, <sup>4</sup>Xi'an Jiaotong-Liverpool University,</p>
                     <p class="affil"><sup>5</sup>Duke Kunshan University, <sup>6</sup>Shanghai AI Laboratory, <sup>7</sup>Xi'an Jiaotong University,</p>
                     <p class="affil"><sup>8</sup>Beihang University, <sup>9</sup>Tsinghua University, <sup>10</sup>The Chinese University of Hong Kong</p>
-                    <p class="corresponding"><sup>†</sup>Equal contribution</p>
+                    <p class="corresponding"><sup>*</sup>Equal contribution, <sup>†</sup>Project Leader</p>
                 </div>
             </div>
             <div class="hero-buttons">
@@ -108,7 +108,7 @@
             <!-- 3D Visualization -->
             <div class="demo-section">
                 <h3 class="demo-section-title">Interactive 3D Point Cloud Visualizer</h3>
-                <p class="demo-description">Explore SynthVerse point tracking results in an interactive 3D viewer. Select different scenarios to visualize point trajectories in 3D space.</p>
+<!--                <p class="demo-description">Explore SynthVerse point tracking results in an interactive 3D viewer. Select different scenarios to visualize point trajectories in 3D space.</p>-->
                 <div class="viz-container">
                     <div class="viz-loading" id="vizLoader">
                         <div class="viz-spinner"></div>
@@ -121,7 +121,7 @@
             <!-- Demo Video -->
             <div class="demo-section">
                 <h3 class="demo-section-title">Demo Video</h3>
-                <p class="demo-description">Point tracking results across diverse scenarios including navigation, human motion, animal movement, and object manipulation.</p>
+<!--                <p class="demo-description">Point tracking results across diverse scenarios including navigation, human motion, animal movement, and object manipulation.</p>-->
                 <div class="demo-video-container">
                     <video controls autoplay muted loop playsinline>
                         <source src="assets/videos/merged_withf.mp4" type="video/mp4">
@@ -148,34 +148,34 @@
         </div>
     </section>
 
-    <!-- Key Features -->
-    <section id="features">
-        <div class="container">
-            <h2 class="section-title">Key Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Large-Scale</h3>
-                    <p><strong>5,816K</strong> training frames<br><strong>59K</strong> test frames<br><strong>48K</strong> sequences</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Multi-Domain</h3>
-                    <p>Animation, Embodied AI, Navigation, Hand Interaction, and more</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>High-Quality</h3>
-                    <p>Precise 3D trajectories, depth, instance masks, and visibility annotations</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>Diverse Objects</h3>
-                    <p><strong>1K</strong> articulated objects<br><strong>6K</strong> deformable objects<br><strong>75</strong> animal species</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!--    &lt;!&ndash; Key Features &ndash;&gt;-->
+<!--    <section id="features">-->
+<!--        <div class="container">-->
+<!--            <h2 class="section-title">Key Features</h2>-->
+<!--            <div class="features-grid">-->
+<!--                <div class="feature-card">-->
+<!--                    <div class="feature-icon">📊</div>-->
+<!--                    <h3>Large-Scale</h3>-->
+<!--                    <p><strong>5,816K</strong> training frames<br><strong>59K</strong> test frames<br><strong>48K</strong> sequences</p>-->
+<!--                </div>-->
+<!--                <div class="feature-card">-->
+<!--                    <div class="feature-icon">🌐</div>-->
+<!--                    <h3>Multi-Domain</h3>-->
+<!--                    <p>Animation, Embodied AI, Navigation, Hand Interaction, and more</p>-->
+<!--                </div>-->
+<!--                <div class="feature-card">-->
+<!--                    <div class="feature-icon">🎯</div>-->
+<!--                    <h3>High-Quality</h3>-->
+<!--                    <p>Precise 3D trajectories, depth, instance masks, and visibility annotations</p>-->
+<!--                </div>-->
+<!--                <div class="feature-card">-->
+<!--                    <div class="feature-icon">🤖</div>-->
+<!--                    <h3>Diverse Objects</h3>-->
+<!--                    <p><strong>1K</strong> articulated objects<br><strong>6K</strong> deformable objects<br><strong>75</strong> animal species</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
     <!-- Dataset Overview -->
     <section id="dataset">
@@ -368,43 +368,43 @@
                 <div class="pipeline-content">
                     <div class="pipeline-image">
                         <img src="pipeline.png" alt="SynthVerse Data Generation Pipeline" loading="lazy">
-                        <p class="image-caption">SynthVerse data generation pipeline: From raw data acquisition to scene construction and data annotation.</p>
+<!--                        <p class="image-caption">SynthVerse data generation pipeline: From raw data acquisition to scene construction and data annotation.</p>-->
                     </div>
-                    <p>SynthVerse is generated through a unified cross-platform pipeline integrating Blender and Isaac Sim, consisting of three main stages:</p>
+<!--                    <p>SynthVerse is generated through a unified cross-platform pipeline integrating Blender and Isaac Sim, consisting of three main stages:</p>-->
                     <div class="pipeline-steps">
-                        <div class="pipeline-step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h4>Raw Data Acquisition</h4>
-                                <p>Curating diverse resources including 3D/4D assets, HDR environment maps, mesh scenes, and production content from multiple sources.</p>
-                            </div>
-                        </div>
-                        <div class="pipeline-step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h4>Scene Construction</h4>
-                                <p>Building dynamic scenes across multiple technical components: Embodied, Navigation, Animation, and 3D Human-Object Interaction (3DHOI).</p>
-                            </div>
-                        </div>
-                        <div class="pipeline-step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h4>Data Annotation</h4>
-                                <p>Generating accurate 3D point trajectories, projecting to 2D, and determining visibility through occlusion detection.</p>
-                            </div>
-                        </div>
+<!--                        <div class="pipeline-step">-->
+<!--                            <div class="step-number">1</div>-->
+<!--                            <div class="step-content">-->
+<!--                                <h4>Raw Data Acquisition</h4>-->
+<!--                                <p>Curating diverse resources including 3D/4D assets, HDR environment maps, mesh scenes, and production content from multiple sources.</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="pipeline-step">-->
+<!--                            <div class="step-number">2</div>-->
+<!--                            <div class="step-content">-->
+<!--                                <h4>Scene Construction</h4>-->
+<!--                                <p>Building dynamic scenes across multiple technical components: Embodied, Navigation, Animation, and 3D Human-Object Interaction (3DHOI).</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="pipeline-step">-->
+<!--                            <div class="step-number">3</div>-->
+<!--                            <div class="step-content">-->
+<!--                                <h4>Data Annotation</h4>-->
+<!--                                <p>Generating accurate 3D point trajectories, projecting to 2D, and determining visibility through occlusion detection.</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
 
-            <!-- Radar Chart Comparison -->
-            <div class="subsection">
-                <h3 class="subsection-title">Dataset Diversity Comparison</h3>
-                <div class="chart-container">
-                    <img src="lindar.png" alt="Dataset Diversity Radar Chart" loading="lazy" class="chart-image">
-                    <p class="image-caption">Comparison of dataset diversity across different dimensions. SynthVerse covers a broader range of scenarios including articulated objects, deformable objects, and embodied manipulation.</p>
-                </div>
-            </div>
+<!--            &lt;!&ndash; Radar Chart Comparison &ndash;&gt;-->
+<!--            <div class="subsection">-->
+<!--                <h3 class="subsection-title">Dataset Diversity Comparison</h3>-->
+<!--                <div class="chart-container">-->
+<!--                    <img src="lindar.png" alt="Dataset Diversity Radar Chart" loading="lazy" class="chart-image">-->
+<!--                    <p class="image-caption">Comparison of dataset diversity across different dimensions. SynthVerse covers a broader range of scenarios including articulated objects, deformable objects, and embodied manipulation.</p>-->
+<!--                </div>-->
+<!--            </div>-->
 
             <!-- Scene Types -->
             <div class="subsection">
@@ -452,34 +452,34 @@
         <div class="container">
             <h2 class="section-title">Benchmark Results</h2>
 
-            <div class="subsection">
-                <h3 class="subsection-title">SynthVerse Benchmark</h3>
-                <p>We establish a highly diverse benchmark consisting of seven subsets spanning different domains. We evaluate state-of-the-art 2D and 3D point tracking methods including CoTracker, CoTracker3, SpatialTrackerV2, and TAPIP3D.</p>
+<!--            <div class="subsection">-->
+<!--                <h3 class="subsection-title">SynthVerse Benchmark</h3>-->
+<!--                <p>We establish a highly diverse benchmark consisting of seven subsets spanning different domains. We evaluate state-of-the-art 2D and 3D point tracking methods including CoTracker, CoTracker3, SpatialTrackerV2, and TAPIP3D.</p>-->
 
-                <div class="benchmark-metrics">
-                    <h4>Evaluation Metrics</h4>
-                    <ul>
-                        <li><strong>AJ<sub>3D</sub></strong>: 3D Jaccard index measuring spatial and visibility overlap</li>
-                        <li><strong>APD<sub>3D</sub></strong>: 3D Average Position Distance</li>
-                        <li><strong>AJ<sub>2D</sub></strong>: 2D Jaccard index for spatio-temporal alignment</li>
-                        <li><strong>APD<sub>2D</sub></strong>: 2D Average Position Distance</li>
-                        <li><strong>OA</strong>: Occlusion Accuracy</li>
-                    </ul>
-                </div>
+<!--                <div class="benchmark-metrics">-->
+<!--                    <h4>Evaluation Metrics</h4>-->
+<!--                    <ul>-->
+<!--                        <li><strong>AJ<sub>3D</sub></strong>: 3D Jaccard index measuring spatial and visibility overlap</li>-->
+<!--                        <li><strong>APD<sub>3D</sub></strong>: 3D Average Position Distance</li>-->
+<!--                        <li><strong>AJ<sub>2D</sub></strong>: 2D Jaccard index for spatio-temporal alignment</li>-->
+<!--                        <li><strong>APD<sub>2D</sub></strong>: 2D Average Position Distance</li>-->
+<!--                        <li><strong>OA</strong>: Occlusion Accuracy</li>-->
+<!--                    </ul>-->
+<!--                </div>-->
 
-                <div class="benchmark-subsets">
-                    <h4>Benchmark Subsets</h4>
-                    <div class="subsets-grid">
-                        <div class="subset-badge">SynthVerse-Nav</div>
-                        <div class="subset-badge">SynthVerse-Human</div>
-                        <div class="subset-badge">SynthVerse-Animal</div>
-                        <div class="subset-badge">SynthVerse-Objects</div>
-                        <div class="subset-badge">SynthVerse-Embodied</div>
-                        <div class="subset-badge">SynthVerse-Film</div>
-                        <div class="subset-badge">SynthVerse-Interaction</div>
-                    </div>
-                </div>
-            </div>
+<!--                <div class="benchmark-subsets">-->
+<!--                    <h4>Benchmark Subsets</h4>-->
+<!--                    <div class="subsets-grid">-->
+<!--                        <div class="subset-badge">SynthVerse-Nav</div>-->
+<!--                        <div class="subset-badge">SynthVerse-Human</div>-->
+<!--                        <div class="subset-badge">SynthVerse-Animal</div>-->
+<!--                        <div class="subset-badge">SynthVerse-Objects</div>-->
+<!--                        <div class="subset-badge">SynthVerse-Embodied</div>-->
+<!--                        <div class="subset-badge">SynthVerse-Film</div>-->
+<!--                        <div class="subset-badge">SynthVerse-Interaction</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
             <!-- Table 4: SynthVerse Benchmark Results -->
             <div class="subsection">
@@ -617,28 +617,28 @@
                 </div>
             </div>
 
-            <!-- Key Findings -->
-            <div class="subsection">
-                <h3 class="subsection-title">Key Findings</h3>
-                <div class="findings-grid">
-                    <div class="finding-card">
-                        <h4>Improved Generalization</h4>
-                        <p>Fine-tuning on SynthVerse yields AJ<sub>3D</sub> improvements from 33.3 to 41.8 (+8.5) on our benchmark, with consistent gains across all metrics.</p>
-                    </div>
-                    <div class="finding-card">
-                        <h4>Domain Sensitivity</h4>
-                        <p>Nav and Film are the most challenging subsets for all methods, due to rapid viewpoint changes and fast scene transitions.</p>
-                    </div>
-                    <div class="finding-card">
-                        <h4>3D vs 2D Gap</h4>
-                        <p>3D point tracking remains substantially more challenging than 2D, with larger performance variance across domains.</p>
-                    </div>
-                    <div class="finding-card">
-                        <h4>Sim-to-Real Transfer</h4>
-                        <p>Training on SynthVerse improves real-world performance on ADT (+1.3 AJ<sub>3D</sub>), DriveTrack (+0.5), and PStudio (+0.5) benchmarks.</p>
-                    </div>
-                </div>
-            </div>
+<!--            &lt;!&ndash; Key Findings &ndash;&gt;-->
+<!--            <div class="subsection">-->
+<!--                <h3 class="subsection-title">Key Findings</h3>-->
+<!--                <div class="findings-grid">-->
+<!--                    <div class="finding-card">-->
+<!--                        <h4>Improved Generalization</h4>-->
+<!--                        <p>Fine-tuning on SynthVerse yields AJ<sub>3D</sub> improvements from 33.3 to 41.8 (+8.5) on our benchmark, with consistent gains across all metrics.</p>-->
+<!--                    </div>-->
+<!--                    <div class="finding-card">-->
+<!--                        <h4>Domain Sensitivity</h4>-->
+<!--                        <p>Nav and Film are the most challenging subsets for all methods, due to rapid viewpoint changes and fast scene transitions.</p>-->
+<!--                    </div>-->
+<!--                    <div class="finding-card">-->
+<!--                        <h4>3D vs 2D Gap</h4>-->
+<!--                        <p>3D point tracking remains substantially more challenging than 2D, with larger performance variance across domains.</p>-->
+<!--                    </div>-->
+<!--                    <div class="finding-card">-->
+<!--                        <h4>Sim-to-Real Transfer</h4>-->
+<!--                        <p>Training on SynthVerse improves real-world performance on ADT (+1.3 AJ<sub>3D</sub>), DriveTrack (+0.5), and PStudio (+0.5) benchmarks.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </section>
 
@@ -674,10 +674,10 @@
         <div class="container">
             <h2 class="section-title">Citation</h2>
             <div class="citation-box">
-                <pre><code>@inproceedings{synthverse2025,
+                <pre><code>@inproceedings{synthverse2026,
   title={SynthVerse: A Large-Scale Diverse Synthetic Dataset for Point Tracking},
   author={Zhao, Weiguang and Xu, Haoran and Miao, Xingyu and Zhao, Qin and Zhang, Rui and Huang, Kaizhu and Gao, Ning and Cao, Peizhou and Sun, Mingze and Yu, Mulin and Lu, Tao and Xu, Linning and Dong, Junting and Pang, Jiangmiao},
-  year={2025}
+  year={2026}
 }</code></pre>
                 <button class="copy-btn" onclick="copyBibTeX()">
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
