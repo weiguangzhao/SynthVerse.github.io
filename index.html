@@ -52,8 +52,8 @@
             <h1 class="title">SynthVerse: A Large-Scale Diverse Synthetic Dataset for Point Tracking</h1>
             <div class="authors">
                 <div class="authors-list">
-                    <span class="author"><a href="https://orcid.org/0000-0002-6925-9876">Weiguang Zhao</a><sup>1*</sup></span>,
-                    <span class="author">Haoran Xu<sup>2</sup></span>,
+                    <span class="author">Weiguang Zhao</a><sup>1,†</sup></span>,
+                    <span class="author">Haoran Xu<sup>2,†</sup></span>,
                     <span class="author">Xingyu Miao<sup>3</sup></span>,
                     <span class="author">Qin Zhao<sup>2</sup></span>,
                     <span class="author">Rui Zhang<sup>4</sup></span>,
@@ -71,7 +71,7 @@
                     <p class="affil"><sup>1</sup>University of Liverpool, <sup>2</sup>Zhejiang University, <sup>3</sup>Durham University, <sup>4</sup>Xi'an Jiaotong-Liverpool University,</p>
                     <p class="affil"><sup>5</sup>Duke Kunshan University, <sup>6</sup>Shanghai AI Laboratory, <sup>7</sup>Xi'an Jiaotong University,</p>
                     <p class="affil"><sup>8</sup>Beihang University, <sup>9</sup>Tsinghua University, <sup>10</sup>The Chinese University of Hong Kong</p>
-                    <p class="corresponding"><sup>*</sup>Corresponding author: weiguang.zhao@liverpool.ac.uk</p>
+                    <p class="corresponding"><sup>†</sup>Equal contribution</p>
                 </div>
             </div>
             <div class="hero-buttons">
@@ -207,7 +207,7 @@
 
             <!-- Source Data Table -->
             <div class="subsection">
-                <h3 class="subsection-title">Table 3. Source Data</h3>
+                <h3 class="subsection-title">Source Data</h3>
                 <p class="table-note">Ins., Cam., Traj., and Vis. separately denote instance masks, camera poses, point trajectories, and point visibility. Moreover, <span class="sym-check">✓</span> indicates that the original dataset already provides the corresponding signal. <span class="sym-cross">✗</span> is that the original dataset does not include this information, and we also do not provide it. <span class="sym-new">☺</span> represents that the original dataset lacks this information, but we additionally annotate and incorporate it in our SynthVerse.</p>
                 <div class="table-wrapper">
                     <table class="source-data-table">
@@ -368,7 +368,7 @@
                 <div class="pipeline-content">
                     <div class="pipeline-image">
                         <img src="pipeline.png" alt="SynthVerse Data Generation Pipeline" loading="lazy">
-                        <p class="image-caption">Fig. 1. SynthVerse data generation pipeline: From raw data acquisition to scene construction and data annotation.</p>
+                        <p class="image-caption">SynthVerse data generation pipeline: From raw data acquisition to scene construction and data annotation.</p>
                     </div>
                     <p>SynthVerse is generated through a unified cross-platform pipeline integrating Blender and Isaac Sim, consisting of three main stages:</p>
                     <div class="pipeline-steps">
@@ -402,7 +402,7 @@
                 <h3 class="subsection-title">Dataset Diversity Comparison</h3>
                 <div class="chart-container">
                     <img src="lindar.png" alt="Dataset Diversity Radar Chart" loading="lazy" class="chart-image">
-                    <p class="image-caption">Fig. 2. Comparison of dataset diversity across different dimensions. SynthVerse covers a broader range of scenarios including articulated objects, deformable objects, and embodied manipulation.</p>
+                    <p class="image-caption">Comparison of dataset diversity across different dimensions. SynthVerse covers a broader range of scenarios including articulated objects, deformable objects, and embodied manipulation.</p>
                 </div>
             </div>
 
@@ -483,7 +483,7 @@
 
             <!-- Table 4: SynthVerse Benchmark Results -->
             <div class="subsection">
-                <h3 class="subsection-title">Table 4. SynthVerse Benchmark Results</h3>
+                <h3 class="subsection-title">SynthVerse Benchmark Results</h3>
                 <p class="table-note">For 2D trackers CoTracker series, we lift predicted 2D points to 3D using GT depth and GT camera pose. All metrics use higher-is-better convention.</p>
 
                 <!-- Part 1: Nav, Human, Animal, Objects -->
@@ -677,7 +677,6 @@
                 <pre><code>@inproceedings{synthverse2025,
   title={SynthVerse: A Large-Scale Diverse Synthetic Dataset for Point Tracking},
   author={Zhao, Weiguang and Xu, Haoran and Miao, Xingyu and Zhao, Qin and Zhang, Rui and Huang, Kaizhu and Gao, Ning and Cao, Peizhou and Sun, Mingze and Yu, Mulin and Lu, Tao and Xu, Linning and Dong, Junting and Pang, Jiangmiao},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2025}
 }</code></pre>
                 <button class="copy-btn" onclick="copyBibTeX()">
