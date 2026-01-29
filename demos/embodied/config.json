@@ -1,11 +1,11 @@
 {
-  "pointSize": 0.03,
+  "pointSize": 0.015,
   "pointOpacity": 1,
   "maxDepth": 1.1,
   "showTrajectory": true,
   "trajectoryLineWidth": 4.5,
   "trajectoryBallSize": 0.005,
-  "trajectoryHistory": 82,
+  "trajectoryHistory": 15,
   "showCameraFrustum": true,
   "frustumSize": 0.06,
   "cameraPosition": {
@@ -23,6 +23,6 @@
     "y": 0.014468700668009583,
     "z": -0.292408621456414
   },
-  "currentFrame": 170,
+  "currentFrame": 381,
   "isPlaying": true
 }
