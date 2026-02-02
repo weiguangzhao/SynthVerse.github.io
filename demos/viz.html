@@ -751,9 +751,9 @@
         this.lastFrameTime = 0;
         this.defaultSettings = null;
         
-        // Scene path - get from URL or default to 'flower'
+        // Scene path - get from URL or default to 'hand'
         const urlParams = new URLSearchParams(window.location.search);
-        this.currentScene = urlParams.get('scene') || 'flower';
+        this.currentScene = urlParams.get('scene') || 'hand';
         
         this.ui = {
           statusBar: document.getElementById('status-bar'),
