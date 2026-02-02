@@ -1,0 +1,28 @@
+{
+  "pointSize": 0.1,
+  "pointOpacity": 1,
+  "maxDepth": 42.6,
+  "showTrajectory": true,
+  "trajectoryLineWidth": 3,
+  "trajectoryBallSize": 0.005,
+  "trajectoryHistory": 15,
+  "showCameraFrustum": true,
+  "frustumSize": 2.08,
+  "cameraPosition": {
+    "x": -68.22075293599836,
+    "y": 6.288888344936262,
+    "z": -36.68068913738322
+  },
+  "cameraTarget": {
+    "x": 3.574724718864544,
+    "y": 0.7031494484248918,
+    "z": -1.6636949734544646
+  },
+  "cameraUp": {
+    "x": 0.4372101723919927,
+    "y": -0.017409893252357134,
+    "z": -0.899190836682573
+  },
+  "currentFrame": 50,
+  "isPlaying": true
+}
